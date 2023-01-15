@@ -74,3 +74,128 @@ a {
     color: bisque;
     font-size: 300%;
   }
+  .card {
+    width: 1517px;
+    height: 300px;
+    background: #07182E;
+    position: relative;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  
+  .card h2 {
+    z-index: 1;
+    color: white;
+    font-size: 2em;
+  }
+  
+  .card::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    height: 400%;
+    animation: rotBGimg 3s linear infinite;
+    transition: all 0.2s linear;
+  }
+  
+  @keyframes rotBGimg {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .card::after {
+    content: '';
+    position: absolute;
+    background: #07182E;
+    ;
+    inset: 5px;
+    border-radius: 15px;
+  }  
+  /* .card:hover:before {
+    background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
+    animation: rotBGimg 3.5s linear infinite;
+  } */
+  .para p{font-size: larger; text-align: center; display: flex;}
+  .component{
+    font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+    width: 750px;
+    margin:0 auto;
+    padding: 3rem;
+  }
+  
+  .component blockquote.quote {
+      position: relative; 
+      text-align: center;
+      padding: 1rem 1.2rem;
+      width: 80%;  /* create space for the quotes */
+      color: #484748;
+      margin: 1rem auto 2rem;
+  }
+  .component blockquote.EN {
+      background:
+      linear-gradient(to right, #039be5 4px, transparent 4px) 0 100%,
+      linear-gradient(to left, #039be5 4px, transparent 4px) 100% 0,
+      linear-gradient(to bottom, #039be5 4px, transparent 4px) 100% 0,
+      linear-gradient(to top, #039be5 4px, transparent 4px) 0 100%;
+      background-repeat: no-repeat;
+      background-size: 20px 20px;
+  }
+  
+  .component blockquote.DE {
+      background:
+      linear-gradient(to right, #039be5 4px, transparent 4px) 0% 0%,
+      linear-gradient(to bottom, #039be5 4px, transparent 4px) 0% 0%,
+      linear-gradient(to left, #039be5 4px, transparent 4px) 100% 100%,
+      linear-gradient(to top, #039be5 4px, transparent 4px) 100% 100%;
+      background-repeat: no-repeat;
+      background-size: 20px 20px;
+  }
+      
+  
+  /* -- create the quotation marks -- */
+  .component blockquote.quote:before,
+  .component blockquote.quote:after{
+      font-family: FontAwesome;
+      position: absolute;
+      color: #039be5;
+      font-size: 34px;
+  }
+  
+  .component blockquote.EN:before{
+      content: "\f10d";
+      top: -12px;
+      margin-right: -20px;
+      right: 100%;
+  }
+  .component blockquote.EN:after{
+      content: "\f10e";
+      margin-left: -20px;
+      left: 100%;  
+      top: auto;
+      bottom: -20px;
+  }
+  .component blockquote.DE:before{
+      content: "\f10e";
+      margin-right: -20px;
+      bottom: -20px;
+      right: 100%;
+  }
+  .component blockquote.DE:after{
+      content: "\f10d";
+      margin-left: -20px;
+      left: 100%;  
+      top: -20px;
+      bottom: auto;
+  }
+  
+  
+  
